@@ -4,7 +4,7 @@ import 'package:magmel/controllers/video_controller.dart';
 import 'package:magmel/views/screens/comment_screen.dart';
 import 'package:magmel/views/screens/video_poster/poster_screen.dart';
 import 'package:magmel/views/widgets/circle_animation.dart';
-import 'package:magmel/views/widgets/video_player_iten.dart';
+import 'package:magmel/views/widgets/video_player_item.dart';
 import 'package:video_player/video_player.dart';
 import 'package:get/get.dart';
 
@@ -153,8 +153,15 @@ class VideoScreen extends StatelessWidget {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                buildProfile(
-                                  data.profilePhoto,
+                                InkWell(
+                                  onTap: () => Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => PosterScreen(),
+                                    ),
+                                  ),
+                                  child: buildProfile(
+                                    data.profilePhoto,
+                                  ),
                                 ),
                                 Column(
                                   children: [
