@@ -153,8 +153,14 @@ class VideoScreen extends StatelessWidget {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                buildProfile(
-                                  data.profilePhoto,
+                                InkWell(
+                                  onTap: () => Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PosterScreen())),
+                                  child: buildProfile(
+                                    data.profilePhoto,
+                                  ),
                                 ),
                                 Column(
                                   children: [

@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int pageIdx = 0;
+  int pageIdx = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +24,14 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         backgroundColor: backgroundColor,
         selectedItemColor: buttonColor,
-        unselectedItemColor: Colors.white,
+        unselectedItemColor: Colors.black,
         currentIndex: pageIdx,
         items: const [
           BottomNavigationBarItem(
-            icon: CustomIcon(),
+            icon: ImageIcon(
+              AssetImage("assets/images/add12.PNG"),
+              size: 40,
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -36,8 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, size: 30),
-            label: 'Home',
+            icon: Icon(Icons.local_movies, size: 30),
+            label: 'Video',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message, size: 30),
