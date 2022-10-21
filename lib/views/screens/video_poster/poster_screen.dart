@@ -5,9 +5,11 @@ class PosterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Image.asset('assets/images/add6.PNG'),
-      color: Colors.amber,
+    return Scaffold(
+      body: Container(
+        color: Colors.amber,
+        child: Image.asset('assets/images/add6.PNG'),
+      ),
     );
   }
 }

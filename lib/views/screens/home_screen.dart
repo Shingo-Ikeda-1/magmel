@@ -29,26 +29,26 @@ class _HomeScreenState extends State<HomeScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/images/add12.PNG"),
+              AssetImage("assets/images/add19.PNG"),
               size: 40,
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search, size: 30),
-            label: 'Search',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_movies, size: 30),
-            label: 'Video',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message, size: 30),
-            label: 'Messages',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person, size: 30),
-            label: 'Profile',
+            label: '',
           ),
         ],
       ),
