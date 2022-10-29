@@ -6,7 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:magmel/constants.dart';
 import 'package:magmel/models/user.dart' as model;
 import 'package:magmel/views/screens/auth/login_screen.dart';
-import 'package:magmel/views/screens/home_screen.dart';
+import 'package:magmel/views/screens/home/home_screen.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();

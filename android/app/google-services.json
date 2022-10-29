@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "740812214470",
+    "project_id": "magmel-arts",
+    "storage_bucket": "magmel-arts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740812214470:android:f26a4b9242ed1db4e807c7",
+        "android_client_info": {
+          "package_name": "com.example.magmel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740812214470-pr5lbnh9cmpov4hn3c0a95c298pbktn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlTCVmA5fMP_NV_TAUNkqc0fmvkZNRxD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740812214470-pr5lbnh9cmpov4hn3c0a95c298pbktn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740812214470:android:88448b05d0af64a0e807c7",
+        "android_client_info": {
+          "package_name": "com.example.magmel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740812214470-pr5lbnh9cmpov4hn3c0a95c298pbktn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlTCVmA5fMP_NV_TAUNkqc0fmvkZNRxD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740812214470-pr5lbnh9cmpov4hn3c0a95c298pbktn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
