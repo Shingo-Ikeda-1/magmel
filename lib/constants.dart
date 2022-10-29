@@ -3,17 +3,18 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:magmel/controllers/auth_controller.dart';
-import 'package:magmel/views/screens/add_video_screen.dart';
-import 'package:magmel/views/screens/musium_screen.dart';
-import 'package:magmel/views/screens/profile_screen.dart';
-import 'package:magmel/views/screens/search_screen.dart';
-import 'package:magmel/views/screens/video_poster/video_screen.dart';
+import 'package:magmel/views/screens/home/add_video_screen.dart';
+import 'package:magmel/views/screens/home/musium_screen.dart';
+import 'package:magmel/views/screens/home/profile_screen.dart';
+import 'package:magmel/views/screens/home/search_screen.dart';
+import 'package:magmel/views/screens/home/video_poster/video_screen.dart';
+import 'package:magmel/views/screens/home/video_poster/video_screen_switcher.dart';
 
 List pages = [
   const AddVideoScreen(),
   SearchScreen(),
-  VideoScreen(),
-  const MusiumScreen(),
+  VideoScreenSwitcher(),
+  MusiumScreen(),
   ProfileScreen(uid: authController.user.uid),
 ];
 
