@@ -62,18 +62,35 @@ class ProfileController extends GetxController {
       } else {
         isFollowing = false;
       }
+      print(
+          'follow debug: in getUserData: followers.toString() ${followers.toString()}');
+      print(
+          'follow debug: in getUserData: following.toString() ${following.toString()}');
+      print('follow debug: in getUserData: isFollowing ${isFollowing}');
+      print(
+          'follow debug: in getUserData: likes.toString() ${likes.toString()}');
+      print('follow debug: in getUserData: profilePhoto ${profilePhoto}');
+      print('follow debug: in getUserData: name ${name}');
+      print('follow debug: in getUserData: thumbnails ${thumbnails}');
+      _user.value = {
+        'followers': followers.toString(),
+        'following': following.toString(),
+        'isFollowing': isFollowing,
+        'likes': likes.toString(),
+        'profilePhoto': profilePhoto,
+        'name': name,
+        'thumbnails': thumbnails,
+      };
+      print(
+          'follow debug: in getUserData: _user.value: ${_user.value['isFollowing']}');
+      update();
     });
+    // It doesn't work well when retreiving value from _user.vlaue
 
-    _user.value = {
-      'followers': followers.toString(),
-      'following': following.toString(),
-      'isFollowing': isFollowing,
-      'likes': likes.toString(),
-      'profilePhoto': profilePhoto,
-      'name': name,
-      'thumbnails': thumbnails,
-    };
-    update();
+    // Future.delayed(Duration(seconds: 2), (() {
+    //   print(
+    //       'follow debug: in getUserData: delayed: ${_user.value['isFollowing']}');
+    // }));
   }
 
   followUser() async {
@@ -120,6 +137,10 @@ class ProfileController extends GetxController {
       );
     }
     _user.value.update('isFollowing', (value) => !value);
+    print('isFollowing is ${_user.value['isFollowing']}');
     update();
+    await Future.delayed(const Duration(milliseconds: 1500), () {
+      print('isFollowing is ${_user.value['isFollowing']}');
+    });
   }
 }

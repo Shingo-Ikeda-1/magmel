@@ -7,7 +7,6 @@ import 'package:magmel/views/screens/home/add_video_screen.dart';
 import 'package:magmel/views/screens/home/musium_screen.dart';
 import 'package:magmel/views/screens/home/profile_screen.dart';
 import 'package:magmel/views/screens/home/search_screen.dart';
-import 'package:magmel/views/screens/home/video_poster/video_screen.dart';
 import 'package:magmel/views/screens/home/video_poster/video_screen_switcher.dart';
 
 List pages = [
@@ -20,8 +19,9 @@ List pages = [
 
 // COLORS
 const backgroundColor = Colors.white;
-var buttonColor = Colors.blue;
+const buttonColor = Colors.blue;
 const borderColor = Colors.grey;
+const textColor = Colors.black;
 
 // FIREBASE
 var firebaseAuth = FirebaseAuth.instance;

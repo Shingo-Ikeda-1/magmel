@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/images/add19.PNG"),
+              AssetImage("assets/images/add20.PNG"),
               size: 40,
             ),
             label: '',

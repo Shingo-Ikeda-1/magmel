@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:magmel/controllers/video_controller.dart';
+import 'package:magmel/views/screens/home/profile_screen.dart';
 import 'package:magmel/views/screens/home/video_poster/poster_screen.dart';
 import 'package:magmel/views/screens/home/video_poster/video_screen.dart';
 
 class VideoScreenSwitcher extends StatelessWidget {
   VideoScreenSwitcher({super.key});
 
-  final VideoController videoController = Get.put(VideoController());
+  final VideoController videoController =
+      Get.put(VideoController(), permanent: true);
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +26,10 @@ class VideoScreenSwitcher extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return [
+                  // VideoScreen(data: data),
                   VideoScreen(data: data),
-                  PosterScreen(data: data),
+                  ProfileScreen(uid: data.uid),
+                  // ProfileScreen(uid: data.uid),
                 ][index];
               },
             );

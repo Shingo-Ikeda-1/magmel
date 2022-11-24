@@ -12,7 +12,9 @@ class VideoScreen extends StatelessWidget {
   final data;
   VideoScreen({Key? key, required this.data}) : super(key: key);
 
-  VideoController videoController = Get.find();
+  // bool isResistered = Get.isRegistered<VideoController>();
+
+  VideoController videoController = Get.find<VideoController>();
 
   buildProfile(String profilePhoto) {
     return SizedBox(
