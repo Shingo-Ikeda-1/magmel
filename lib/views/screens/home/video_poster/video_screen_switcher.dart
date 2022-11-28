@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:magmel/controllers/video_controller.dart';
 import 'package:magmel/views/screens/home/profile_screen.dart';
-import 'package:magmel/views/screens/home/video_poster/poster_screen.dart';
 import 'package:magmel/views/screens/home/video_poster/video_screen.dart';
 
 class VideoScreenSwitcher extends StatelessWidget {

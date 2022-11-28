@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:magmel/constants.dart';
 import 'package:magmel/controllers/video_controller.dart';
 import 'package:magmel/views/screens/home/comment_screen.dart';
-import 'package:magmel/views/screens/home/video_poster/poster_screen.dart';
+import 'package:magmel/views/screens/home/profile_screen.dart';
 import 'package:magmel/views/widgets/circle_animation.dart';
 import 'package:magmel/views/widgets/video_player_item.dart';
 import 'package:video_player/video_player.dart';
@@ -151,8 +151,8 @@ class VideoScreen extends StatelessWidget {
                           InkWell(
                             onTap: () =>
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => PosterScreen(
-                                          data: data,
+                                    builder: (context) => ProfileScreen(
+                                          uid: data.uid,
                                         ))),
                             child: buildProfile(
                               data.profilePhoto,

@@ -14,3 +14,20 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 android {
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
+
+
+
+
+Fix it doesn't transit as PageView.builder
+- Check for VideoScreenSwitcher
+
+InkWell(
+                            onTap: () =>
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => ProfileScreen(
+                                          uid: data.uid,
+                                        ))),
+                            child: buildProfile(
+                              data.profilePhoto,
+                            ),
+                          ),
