@@ -1,12 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:magmel/constants.dart';
+import 'package:magmel/controllers/video_controller.dart';
 
 class ProfileController extends GetxController {
   final Rx<Map<String, dynamic>> _user = Rx<Map<String, dynamic>>({});
-  Map<String, dynamic> get user => _user.value;
+  final Rx<String> _uid = "".obs;
 
-  Rx<String> _uid = "".obs;
+  Map<String, dynamic> get user => _user.value;
 
   updateUserId(String uid) {
     _uid.value = uid;
@@ -57,21 +58,7 @@ class ProfileController extends GetxController {
         .doc(authController.user.uid)
         .get()
         .then((value) {
-      if (value.exists) {
-        isFollowing = true;
-      } else {
-        isFollowing = false;
-      }
-      print(
-          'follow debug: in getUserData: followers.toString() ${followers.toString()}');
-      print(
-          'follow debug: in getUserData: following.toString() ${following.toString()}');
-      print('follow debug: in getUserData: isFollowing ${isFollowing}');
-      print(
-          'follow debug: in getUserData: likes.toString() ${likes.toString()}');
-      print('follow debug: in getUserData: profilePhoto ${profilePhoto}');
-      print('follow debug: in getUserData: name ${name}');
-      print('follow debug: in getUserData: thumbnails ${thumbnails}');
+      isFollowing = value.exists;
       _user.value = {
         'followers': followers.toString(),
         'following': following.toString(),
@@ -81,8 +68,6 @@ class ProfileController extends GetxController {
         'name': name,
         'thumbnails': thumbnails,
       };
-      print(
-          'follow debug: in getUserData: _user.value: ${_user.value['isFollowing']}');
       update();
     });
     // It doesn't work well when retreiving value from _user.vlaue
@@ -137,10 +122,9 @@ class ProfileController extends GetxController {
       );
     }
     _user.value.update('isFollowing', (value) => !value);
-    print('isFollowing is ${_user.value['isFollowing']}');
+    if (Get.isRegistered<VideoController>()) {
+      Get.find<VideoController>().followUser(_uid.value);
+    }
     update();
-    await Future.delayed(const Duration(milliseconds: 1500), () {
-      print('isFollowing is ${_user.value['isFollowing']}');
-    });
   }
 }

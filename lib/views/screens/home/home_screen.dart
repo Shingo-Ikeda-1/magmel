@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magmel/constants.dart';
-import 'package:magmel/views/widgets/custom_icon.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int pageIdx = 3;
+  int pageIdx = 2;
 
   @override
   Widget build(BuildContext context) {

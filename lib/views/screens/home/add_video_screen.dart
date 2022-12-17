@@ -86,7 +86,7 @@ class AddVideoScreen extends StatelessWidget {
           child: Container(
             width: 190,
             height: 50,
-            decoration: BoxDecoration(color: buttonColor),
+            decoration: const BoxDecoration(color: buttonColor),
             child: const Center(
               child: Text(
                 'Add Video',

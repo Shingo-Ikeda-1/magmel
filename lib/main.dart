@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:magmel/constants.dart';
 import 'package:magmel/controllers/auth_controller.dart';
-import 'package:magmel/views/screens/auth/login_screen.dart';
-import 'package:magmel/views/screens/auth/signup_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

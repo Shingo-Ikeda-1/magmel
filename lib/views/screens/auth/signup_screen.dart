@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magmel/constants.dart';
-import 'package:magmel/controllers/auth_controller.dart';
 import 'package:magmel/views/screens/auth/login_screen.dart';
 import 'package:magmel/views/widgets/text_input_field.dart';
 
@@ -20,7 +19,7 @@ class SignupScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'Magmel',
                 style: TextStyle(
                   fontSize: 35,
@@ -101,9 +100,9 @@ class SignupScreen extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width - 40,
                 height: 50,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: buttonColor,
-                  borderRadius: const BorderRadius.all(
+                  borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),
                 ),
@@ -143,7 +142,7 @@ class SignupScreen extends StatelessWidget {
                         builder: (context) => LoginScreen(),
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Login',
                       style: TextStyle(fontSize: 20, color: buttonColor),
                     ),

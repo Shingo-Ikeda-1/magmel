@@ -3,9 +3,9 @@ import 'package:magmel/constants.dart';
 import 'package:magmel/controllers/video_controller.dart';
 import 'package:magmel/views/screens/home/comment_screen.dart';
 import 'package:magmel/views/screens/home/profile_screen.dart';
+import 'package:magmel/views/screens/home/video_poster/video_screen_switcher.dart';
 import 'package:magmel/views/widgets/circle_animation.dart';
 import 'package:magmel/views/widgets/video_player_item.dart';
-import 'package:video_player/video_player.dart';
 import 'package:get/get.dart';
 
 class VideoScreen extends StatelessWidget {
@@ -15,6 +15,8 @@ class VideoScreen extends StatelessWidget {
   // bool isResistered = Get.isRegistered<VideoController>();
 
   VideoController videoController = Get.find<VideoController>();
+
+  PageController pageController = Get.find<PageController>();
 
   buildProfile(String profilePhoto) {
     return SizedBox(
@@ -53,7 +55,7 @@ class VideoScreen extends StatelessWidget {
       child: Column(
         children: [
           Container(
-              padding: EdgeInsets.all(11),
+              padding: const EdgeInsets.all(11),
               height: 50,
               width: 50,
               decoration: BoxDecoration(
@@ -149,11 +151,11 @@ class VideoScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           InkWell(
-                            onTap: () =>
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => ProfileScreen(
-                                          uid: data.uid,
-                                        ))),
+                            onTap: () => pageController.animateToPage(
+                              1,
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.easeInOut,
+                            ),
                             child: buildProfile(
                               data.profilePhoto,
                             ),
