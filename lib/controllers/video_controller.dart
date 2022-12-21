@@ -10,7 +10,6 @@ class VideoController extends GetxController {
   List<Video> get videoList => _videoList.value;
   Set<String> get isFollowingSet => _isFollowingSet;
 
-  RxInt debugNumber = 3.obs;
 
   @override
   void onInit() {
@@ -29,13 +28,10 @@ class VideoController extends GetxController {
             print('isFollowing ${index} ${retVal[index].username} ${uidSet}');
           });
           checkIfFollowing(uidSet);
-          print('isFollowing u');
           return retVal;
         },
       ),
     );
-
-    print('isFollowing a');
   }
 
   void checkIfFollowing(Set<String> uids) async {
@@ -50,9 +46,9 @@ class VideoController extends GetxController {
           .exists;
       if (isFollowing) {
         _isFollowingSet.add(uid);
-        print('isFollowing adding to Set');
       }
-      print(_isFollowingSet);
+      _isFollowingSet.refresh();
+      print('isFollowingSet = $_isFollowingSet within vid checkIfFollowing');
     }
   }
 
@@ -71,13 +67,9 @@ class VideoController extends GetxController {
   }
 
   void followUser(String uid) {
-    print('_isFollowingSet.contains(uid) is ${_isFollowingSet.contains(uid)}');
     _isFollowingSet.contains(uid)
         ? _isFollowingSet.remove(uid)
         : _isFollowingSet.add(uid);
-    print('_isFollowingSet.contains(uid) is ${_isFollowingSet.contains(uid)}');
-    debugNumber.value = 2;
-    print('isFollowing debugNumber ${debugNumber}');
     _isFollowingSet.refresh();
   }
 }

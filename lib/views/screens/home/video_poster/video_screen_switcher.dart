@@ -18,57 +18,39 @@ class VideoScreenSwitcher extends StatelessWidget {
       PageController(initialPage: 0, viewportFraction: 1),
       permanent: true);
 
-  // bool isFollowing = false;
-
-  // void checkIfFollowing(String uid) async {
-  //   DocumentSnapshot userId = await firestore
-  //       .collection('users')
-  //       .doc(uid)
-  //       .collection('followers')
-  //       .doc(authController.user.uid)
-  //       .get();
-  //   isFollowing = userId.exists;
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Obx(
       () {
-        var itemCount = videoController.debugNumber.value;
-        print('isFollowing after obs');
-        var pageNumber =
-            videoController.isFollowingSet.contains('Shin Dev') ? 3 : 2;
-        // print('isFollowing Shin Dev $pageNumber');
-        // var pageNumber =
-        //     videoController.isFollowingSet.contains(data.uid.obs) ? 3 : 2;
+        print('isFollowing build');
         return PageView.builder(
           itemCount: videoController.videoList.length,
           controller: PageController(initialPage: 0, viewportFraction: 1),
           scrollDirection: Axis.vertical,
           itemBuilder: (context, index) {
             final data = videoController.videoList[index];
-            // print('isFollowing $pageNumber');
-            print('isFollowing rebuild');
-            // return Obx(
-            //   () {
-            // var pageNumber =
-            //     videoController.isFollowingSet.contains(data.uid.obs)
-            //         ? 3
-            //         : 2;
-            return PageView.builder(
-              controller: pagecontroller,
-              itemCount: pageNumber,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return [
-                  VideoScreen(data: data),
-                  ProfileScreen(uid: data.uid),
-                  const ShopScreen(),
-                ][index];
+            return Obx(
+              () {
+                // var debuglist = videoController.isFollowingSet;
+                // var pageNumber = debuglist.contains(data.uid) ? 3 : 2;
+                var pageNumber =
+                    videoController.isFollowingSet.contains(data.uid) ? 3 : 2;
+                print('isFollowing pageNumber $pageNumber');
+                // print('isFollowing pageNumber ${debuglist}');
+                return PageView.builder(
+                  controller: pagecontroller,
+                  itemCount: pageNumber,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return [
+                      VideoScreen(data: data),
+                      ProfileScreen(uid: data.uid),
+                      const ShopScreen(),
+                    ][index];
+                  },
+                );
               },
             );
-            //   },
-            // );
           },
         );
       },
