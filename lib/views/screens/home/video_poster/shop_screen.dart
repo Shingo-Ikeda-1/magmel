@@ -1,11 +1,14 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:magmel/controllers/cart_provider.dart';
+import 'package:magmel/views/screens/home/video_poster/cart_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:magmel/models/item.dart';
 
 class ShopScreen extends StatelessWidget {
   const ShopScreen({super.key});
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -118,9 +121,9 @@ class ShopScreen extends StatelessWidget {
                   ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.shade900),
+                          backgroundColor: Colors.blueGrey.shade900),
                       onPressed: () {
-                        saveData(index);
+                        // saveData(index);
                       },
                       child: const Text('Add to Cart')),
                 ],
@@ -132,3 +135,5 @@ class ShopScreen extends StatelessWidget {
     );
   }
 }
+
+// https://blog.logrocket.com/building-shopping-cart-flutter/

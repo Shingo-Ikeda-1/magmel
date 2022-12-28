@@ -31,11 +31,11 @@ environment:
 dependencies:
   badges: ^2.0.3
   cached_network_image: ^3.2.2
-  cloud_firestore: ^3.5.1
+  cloud_firestore: ^4.3.0
   cupertino_icons: ^1.0.5
-  firebase_auth: ^3.11.2
-  firebase_core: ^1.24.0
-  firebase_storage: ^10.3.11
+  firebase_auth: ^4.2.3
+  firebase_core: ^2.4.0
+  firebase_storage: ^11.0.9
   flutter:
     sdk: flutter
   get: ^4.6.5
@@ -64,7 +64,9 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/
+  - assets/images/
+    # - assets\images\art_painting\
+    # - assets/images/art_painting/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

@@ -45,7 +45,7 @@ class VideoScreenSwitcher extends StatelessWidget {
                     return [
                       VideoScreen(data: data),
                       ProfileScreen(uid: data.uid),
-                      const ShopScreen(),
+                      ShopScreen(),
                     ][index];
                   },
                 );

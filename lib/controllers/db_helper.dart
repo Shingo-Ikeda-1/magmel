@@ -43,11 +43,11 @@ class DBHelper {
     return queryResult.map((result) => Cart.fromMap(result)).toList();
   }
 
-  // Future<int> updateQuantity(Cart cart) async {
-  //   var dbClient = await database;
-  //   return await dbClient!.update('cart', cart.quantityMap(),
-  //       where: "productId = ?", whereArgs: [cart.productId]);
-  // }
+  Future<int> updateQuantity(Cart cart) async {
+    var dbClient = await database;
+    return await dbClient!.update('cart', cart.toMap(),
+        where: "productId = ?", whereArgs: [cart.productId]);
+  }
 
 // deleting an item from the cart screen
   Future<int> deleteCartItem(int id) async {
