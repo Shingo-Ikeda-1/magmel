@@ -1,16 +1,11 @@
 # magmel
 
-A new Flutter project.
+An arts social media where you can show and sell those arts to viewers.
+Not published.
 
-## Getting Started
+## Social media for Arts
 
-This project is a starting point for a Flutter application.
+Watch Videos and interact with people, sell and/or buy art paintings
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Download Link
+APK: [app.zip](https://github.com/Shingo-Ikeda-1/magmel/files/13452863/app.zip)
