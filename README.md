@@ -13,3 +13,8 @@ You can watch breathtaking art-related Videos and share your thoughts on the art
 Download Link
 APK: [app.zip](https://github.com/Shingo-Ikeda-1/magmel/files/13452863/app.zip)
 
+## Preview
+<img src="https://github.com/user-attachments/assets/201d5906-d8ea-43cc-89dd-c080c0ed37bc" width="250" height="500">
+<img src="https://github.com/user-attachments/assets/15e631af-d53d-4094-9bad-6c4455a5846a" width="250" height="500">
+<img src="https://github.com/user-attachments/assets/89cffa97-9749-4610-a05c-b22e94623594" width="250" height="500">
+<img src="https://github.com/user-attachments/assets/47546af9-86b6-45b9-bd39-9bf9177eb095" width="250" height="500">
